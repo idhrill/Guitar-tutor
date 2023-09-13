@@ -1,0 +1,678 @@
+@import "normalizes.scss"
+@import "resets.scss"
+
+// лучше сначала нормалайз потом ресетс
+
+$color-blue: #559CFF
+$color-orange: #FF7B49
+
+*
+    box-sizing: border-box
+
+@font-face
+    font-family: "MontserratD"
+    src: url('../fonts/Montserrat-Regular.ttf')
+    font-display: swap
+    font-weight: regular
+    font-style: normal
+
+@font-face
+    font-family: "MontserratD"
+    src: url('../fonts/Montserrat-SemiBold.ttf')
+    font-display: swap
+    font-weight: bold
+    font-style: normal
+
+html
+    font-family: "MontserratD"
+    font-weight: regular
+
+.container
+    position: relative
+    max-width: 1140px
+    margin: 0 auto
+
+.main-section
+    position: relative
+    overflow: hidden
+    min-height: 800px
+    background: #FBF0E8
+    padding-top: 15px
+    &__nav-container
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        height: 70px
+        align-items: center
+        margin-bottom: 33px
+    &__logo
+        width: 139px
+    &__content-container
+        display: flex
+        flex-direction: row
+        position: relative
+        z-index: 1
+    &__first-elipse
+        position: absolute
+        z-index: -1
+        top: 129px
+        right: 40px
+    &__second-elipse
+        position: absolute
+        right: -100px
+        top: 650px
+
+.nav-menu
+    &__list
+        display: flex
+        flex-flow: row nowrap
+    &__list-item
+        margin-right: 58px
+        font-size: 18px
+        font-weight: bold
+        &:last-child
+            margin-right: 0px
+        a
+            text-decoration: none
+            color: #000
+
+.left-wrapper
+    position: relative
+    &__img
+        position: relative
+        z-index: 5
+    &__rectangle-blue
+        position: absolute
+        width: 577.604px
+        height: 209.908px
+        background: $color-blue
+        border-radius: 100px
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        transform: rotate(-67.903deg)
+        top: 140px
+        left: -50px
+        z-index: 2
+    &__rectangle-orange
+        position: absolute
+        width: 628.111px
+        height: 209.869px
+        transform: rotate(-48.55deg)
+        border-radius: 100px
+        background: $color-orange
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        top: 160px
+        left: -10px
+        z-index: 3
+    &__rectangle-beige
+        position: absolute
+        width: 601.049px
+        height: 209.831px
+        transform: rotate(-31.585deg)
+        border-radius: 100px
+        background: #EDCDB4
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        top: 220px
+        left: 30px
+        z-index: 1
+
+.right-wrapper
+    width: 510px
+    position: absolute
+    z-index: 100
+    top: 128px
+    right: -20px
+    &__icons-box
+        display: flex
+        flex-direction: row
+        // display: inline-flex можно вместо 2 строк выше
+        gap: 17px
+        margin-bottom: 1px
+        padding-left: 10px
+    &__title
+        margin-bottom: 5px
+    &__text
+        font-size: 16px
+        margin-bottom: 20px
+
+.icons
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border: 1px solid $color-blue
+        border-radius: 100px
+        i
+            font-size: 21px
+
+.title
+    font-size: 72px
+    position: relative
+    font-weight: bold
+    &__hr
+        position: absolute
+        width: 65px
+        bottom: 0px
+        margin: 0px
+        border: none
+        border-top: 1px solid black
+
+.buttons
+    display: inline-flex
+    gap: 32px
+    cursor: pointer
+    &__main-btn
+        width: 200px
+        height: 60px
+        transform: rotate(-0.215deg)
+        flex-shrink: 0
+        border-radius: 100px
+        background: $color-orange
+        filter: drop-shadow(7px 9px 4px rgba(0, 0, 0, 0.25))
+        border: none
+        color: #fff
+        font-size: 18px
+        font-weight: bold
+        cursor: pointer
+    &__icon-btn
+        display: inline-flex
+        gap: 12px
+        align-items: center
+    &__text
+        font-size: 16px
+
+.elipse
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 194px
+    height: 194px
+    transform: rotate(-64.689deg)
+    background: linear-gradient(216deg, rgba(255, 123, 73, 0.50) 5.21%, rgba(85, 156, 255, 0.50) 48.96%, rgba(46, 40, 40, 0.50) 96.58%)
+    border-radius: 150px
+    &_big
+        width: 282px
+        height: 282px
+    &__substract
+        width: 129px
+        height: 129px
+        background: #FBF0E8
+        border-radius: 150px
+        &_white
+            background: #fff
+        &_big
+            width: 188px
+            height: 188px
+
+.second-section
+    min-height: 700px
+    overflow: hidden
+    &__container
+        padding-top: 30px
+        position: relative
+    &__title
+        margin-bottom: 40px
+    &__card-box
+        display: inline-flex
+        justify-content: center
+        gap: 30px
+        margin-bottom: 20px
+    &__icons-box
+        display: flex
+        justify-content: space-evenly
+    &__first-elipse
+        position: absolute
+        top: 80px
+        right: -60px
+        z-index: -1
+    &__second-elipse
+        position: absolute
+        top: 350px
+        left: -60px
+        z-index: -1
+
+.cards-item
+    display: flex
+    align-items: flex-end // прибиваем изображение гитары к низу карточки
+    width: 360px
+    height: 360px
+    background: $color-orange
+    border-radius: 10px
+    position: relative
+    padding-left: 50px // двигаем
+    box-shadow: 14px 15px 4px rgba(0, 0, 0, 0.25)
+    &__img
+        height: 335px
+    &__text
+        width: 275px
+        font-size: 36px
+        text-align: center
+        transform: rotate(90deg) // разворачиваем текст на 90 градусов
+        position: absolute
+        top: 144px
+        right: -60px
+        color: #fff
+        font-weight: bold
+    &_blue
+        background: $color-blue
+    &_black
+        background: #2E2828
+
+.icons-item
+    display: inline-flex
+    align-items: center
+    gap: 15px
+    &__text
+        font-size: 18px
+        span
+            font-size: 48px
+            font-weight: bold
+    &__img
+        width: 65px
+
+.third-section
+    position: relative
+    min-height: 640px
+    background: #FBF0E8
+    z-index: 0
+    overflow: hidden
+    &__container
+        padding-top: 40px
+        display: flex // если flex-inline То нарушится логика позиционировани марджин 0 авто
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding-left: 167px
+    &__right-wrapper
+        max-width: 460px
+    &__right-title
+        margin-bottom: 40px
+    &__text
+        margin-bottom: 20px
+        font-size: 18px
+    &__first-elipse
+        position: absolute
+        top: 90px
+        left: 119px
+        z-index: -1
+    &__figure
+        position: absolute
+        top: 250px
+        left: -20px
+        z-index: -1
+    &__second-elipse
+        position: absolute
+        right: -120px
+        top: -120px
+
+.title__hr_top
+    bottom: 75px
+
+.footer
+    &__img
+        position: absolute
+        left: -200px
+        bottom: 0
+    &__container
+        min-height: 272px // иначе юы не смогли центрировать элементы
+        display: flex
+        align-items: center
+        justify-content: flex-end
+    &__icons-box
+        display: flex
+        flex-direction: row
+        gap: 17px
+        margin-bottom: 1px
+        padding-left: 10px
+    &__title
+        margin-bottom: 20px
+
+
+.main-section__nav-container.sticky
+    left: 5%
+    right: 5%
+    width: 90%
+    position: fixed
+    background-color: rgba(255, 255, 255, 0.75)
+    z-index: 1000
+.hamburger.sticky-ham
+    position: fixed
+    background-color: rgba(255, 255, 255, 0.75)
+    z-index: 1001
+
+// 
+@media (max-width: 1199px)
+    .container
+        width: 960px
+    .left-wrapper
+        &__img
+            width: 600px
+            left: -15px
+        &__rectangle-blue
+            width: 500px
+            height: 200px
+            left: -76px
+        &__rectangle-orange
+            width: 550px
+            height: 200px
+            left: -50px
+        &__rectangle-beige
+            width: 510px
+            height: 190px
+            left: -15px
+    .right-wrapper
+        right: -10px
+    .main-section
+        min-height: 700px
+        &__first-elipse
+            right: 10px
+            top: 100px
+        &__second-elipse
+            top: 575px
+    .second-section
+        min-height: 620px
+        &__card-box
+            gap: 22px
+            display: flex
+            justify-content: center
+    .cards-item
+        width: 300px
+        height: 300px
+        &__img
+            height: 280px
+        &__text
+            font-size: 30px
+            top: 128px
+    .third-section
+        &__container
+            padding-left: 55px
+        &__right-wrapper
+            max-width: 450px
+
+// мой адаптив
+@media (max-width: 991px)
+    .container
+        width: 720px
+    .left-wrapper
+        &__img
+            width: 500px
+            left: -43px
+        &__rectangle-blue
+            width: 400px
+            height: 155px
+            left: -105px
+        &__rectangle-orange
+            width: 450px
+            height: 160px
+            left: -75px
+        &__rectangle-beige
+            width: 435px
+            height: 145px
+            left: -37px
+            top: 211px
+    .right-wrapper
+        right: -165px
+        top: 63px
+        &__text
+            max-width: 400px
+            margin-bottom: 30px
+    .title
+        font-size: 50px
+    .buttons
+        gap: 15px
+    .main-section
+        min-height: 570px
+        &__first-elipse
+            right: -18px
+            top: 20px
+        &__second-elipse
+            top: 490px
+    .second-section
+        min-height: 460px
+        &__card-box
+            gap: 20px
+        &__first-elipse
+            top: 50px
+            right: -20px
+        &__second-elipse
+            top: 180px
+            left: -20px
+        &__title
+            margin-bottom: 25px
+    .cards-item
+        width: 200px
+        height: 200px
+        padding-left: 20px
+        &__img
+            height: 185px
+        &__text
+            font-size: 25px
+            top: 77px
+    .icons-item
+        gap: 15px
+        &__text
+            font-size: 16px
+            span
+                font-size: 35px
+                font-weight: bold
+        &__img
+            width: 50px
+    .third-section
+        &__container
+            padding-left: 20px
+            gap: 30px
+        &__right-wrapper
+            max-width: 450px
+    .title__hr_top
+        bottom: 50px
+
+@media (max-width: 767px)
+    .container
+        width: 540px
+    .nav-menu
+        position: fixed
+        top: 0
+        right: -100%
+        height: 100vh
+        background: $color-blue
+        z-index: 900
+        width: 50%
+        transition: 0.9s all
+        &__list
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            height: 100%
+        &__list-item
+            margin-right: 0
+            font-size: 20px
+    .hamburger
+        width: 30px
+        position: absolute
+        top: 40px
+        right: 40px
+        height: 14px
+        z-index: 1001
+        span
+            height: 2px
+            width: 100%
+            display: block
+            background: black
+            margin-bottom: 4px
+            transition: 1s all
+            &:last-child
+                margin-bottom: 0
+    .hamburger_active
+        span
+            margin-bottom: -2px
+            &:nth-child(1)
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+    .nav-menu_active
+        right: 0px
+    .left-wrapper
+        &__img
+            width: 400px
+            left: -59px
+            top: 98px
+        &__rectangle-blue
+            display: none
+        &__rectangle-orange
+            display: none
+        &__rectangle-beige
+            display: none
+    .right-wrapper
+        right: -160px
+        top: 6px
+        &__button
+            width: 300px
+            flex-wrap: wrap
+            justify-content: center
+        &__text
+            max-width: 400px
+            margin-bottom: 30px
+    .buttons__main-btn
+        margin-bottom: -5px
+    .second-section
+        min-height: 460px
+        &__card-box
+            gap: 15px
+        &__icons-box
+            width: 540px
+            flex-wrap: wrap
+            justify-content: space-around
+        &__icons-item
+            margin-bottom: 10px
+            width: 188px
+        &__first-elipse
+            top: 50px
+            right: -20px
+        &__second-elipse
+            top: 180px
+            left: -20px
+        &__title
+            margin-bottom: 25px
+    .cards-item
+        width: 200px
+        height: 200px
+        padding-left: 3px
+        &__img
+            height: 185px
+        &__text
+            font-size: 25px
+            top: 77px
+            right: -80px
+    .third-section
+        min-height: 545px
+        &__container
+            justify-content: center
+            padding-left: 0px
+        &__left-title
+            display: none
+    .footer__img
+        display: none
+    .footer__container
+        justify-content: center
+    .footer__icons-box
+        padding-left: 65px
+
+@media (max-width: 540px)
+    .container
+        width: 100%
+    .main-section
+        min-height: 650px
+        &__content-container
+            justify-content: center
+        &__second-elipse
+            top: 350px
+            left: -15px
+        &__logo
+            width: 110px
+    .left-wrapper
+        &__img
+            width: 350px
+            left: -42px
+            top: 250px
+    .right-wrapper
+        width: 513px
+        right: -203px
+        top: -16px
+        &__button
+            width: 200px
+            flex-wrap: wrap
+            justify-content: center
+        &__text
+            max-width: 310px
+            margin-bottom: 10px
+            font-size: 14px
+        &__title
+            margin-bottom: 10px
+        &__icons-box
+            width: 250px
+            justify-content: space-between
+            padding-left: 0px
+            margin-bottom: 7px
+    .buttons__main-btn
+        width: 150px
+        font-size: 14px
+    .buttons__icon-btn
+        img
+            width: 40px
+    .second-section
+        min-height: 460px
+        &__container
+            padding-left: 20%
+        &__card-box
+            width: 200px
+            flex-wrap: wrap
+        &__icons-box
+            width: 200px
+            flex-wrap: wrap
+            justify-content: space-around
+            gap: 15px
+        &__icons-item
+            width: 137px
+            margin-bottom: 10px
+        &__second-elipse
+            top: 565px
+            left: 5px
+        &__title
+            margin-bottom: 25px
+    .cards-item
+        width: 200px
+        height: 200px
+        padding-left: 25px
+        &__img
+            height: 185px
+        &__text
+            font-size: 25px
+            top: 77px
+            right: -80px
+    .third-section
+        min-height: 545px
+        &__container
+            justify-content: center
+            padding-left: 0px
+            gap: 8px
+        &__left-title
+            display: none
+        &__text
+            font-size: 16px
+            width: 300px
+        &__first-elipse
+            display: none
+        &__second-elipse
+            top: -155px
+            right: -150px
+        &__icon-btn
+            display: none
+    .title__hr_top
+        bottom: 37px
+    .footer__icons-box
+        padding-left: 43px
+    .title
+        font-size: 40px
